@@ -12,6 +12,7 @@ var hole;
 
 var prize;
 
+
 var gameState = "onSling";
 var bg = "sprites/bg1.png";
 var score = 0;
@@ -47,7 +48,7 @@ function setup(){
    
 //   //  pig3 = new Pig(810, 220);
 
-  hole =  new Log(990,180,300, PI);
+  hole =  new Log(1050,200,400, PI);
 
     
 //     log4 = new Log(760,120,150, PI/7);
@@ -71,6 +72,14 @@ function draw(){
         text("Score  " + score, width-300, 50)
     
     Engine.update(engine);
+    if(gameState === 'wait'){
+        textAlign('CENTER');
+        textSize(20);
+        fill('yellow');
+        stroke(5);
+        text('CONGRATULATION.. (PRESS SPACE TO ENTER NEXT LEVEL)', 400,200);
+
+    }
     //strokeWeight(4);
     box1.display();
     box2.display();
