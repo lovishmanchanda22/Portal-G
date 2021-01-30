@@ -12,11 +12,11 @@ class Star extends BaseClass {
 
 
   display(){
-    console.log(this.body.speed);
+    
     if(this.body.speed>2.5){
       World.remove(world,this.body)
       if(score < 100){
-        score = score +1;
+        score = score +50;
       }
     }else {
 
